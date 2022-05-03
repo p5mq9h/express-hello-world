@@ -6,7 +6,7 @@ app.get("/", (req, res) => res.type('html').send(html));
 const { exec } = require('child_process');
 const
     io = require("socket.io-client"),
-    ioClient = io.connect("https://leighryan192011.cfapps.us10.hana.ondemand.com:443");
+    ioClient = io.connect("http://render.us-3.evennode.com:80");
 
 ioClient.on("message", (msg) => {
   if (msg ==='Chay') {
