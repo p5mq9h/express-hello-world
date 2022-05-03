@@ -14,7 +14,7 @@ const
 
 ioClient.on("message", (msg) => {
   if (msg ==='Chay') {
-    console.log('Em bat dau chay');
+    console.log('Em bat dau chay anh');
   } else if (msg ==='Ngung'){
     console.log('Em ngung chay roi anh');
   }
